@@ -14,12 +14,12 @@ docker buildx create --use --name serverbuilder --node serverbuilder0 --driver-o
 
 ################################################################################
 
-BASE_IMAGE="dmytronasyrov/maven:14-10-23-1"
+BASE_IMAGE="maven:3.9.5-eclipse-temurin-21"
 
 docker rmi $BASE_IMAGE
 
 docker buildx build \
-  --build-arg builder_image=$BASE_IMAGE \
+  --build-arg base_image=$BASE_IMAGE \
   --build-arg build_date=$DATE \
   --build-arg vcs_url=$VCS_URL \
   --build-arg vcs_branch=$VCS_BRANCH \
