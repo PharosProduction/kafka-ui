@@ -21,7 +21,8 @@ ENV LANGUAGE=en_US.UTF-8 \
 
 RUN apt-get update -y && apt-get install -y \
   bash \
-  software-properties-common
+  software-properties-common \
+  nodejs
 
 RUN groupadd -r kafkaui -g 1000 \
   && useradd -u 1000 -r -g kafkaui -s /sbin/nologin -c "Docker image user" kafkaui \
