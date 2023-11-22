@@ -2,7 +2,7 @@
 
 ORGANIZATION="dmytronasyrov"
 DOCKER_REPO="kafka-ui"
-DATE="21-11-23"
+DATE="22-11-23"
 VERSION="1"
 
 VCS_URL="https://github.com/PharosProduction/kafka-ui"
@@ -24,7 +24,7 @@ docker buildx build \
   --build-arg vcs_url=$VCS_URL \
   --build-arg vcs_branch=$VCS_BRANCH \
   --build-arg vcs_ref=$VCS_REF \
-  --platform linux/amd64 \
+  --platform linux/arm64 \
   -f Dockerfile \
   --progress plain \
   --push \
