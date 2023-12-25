@@ -2,8 +2,8 @@
 
 ORGANIZATION="dmytronasyrov"
 DOCKER_REPO="kafka-ui"
-DATE="22-11-23"
-VERSION="1"
+DATE="25-12-23"
+VERSION="2"
 
 VCS_URL="https://github.com/PharosProduction/kafka-ui"
 VCS_BRANCH="kafka/master"
@@ -14,7 +14,7 @@ docker buildx create --use --name serverbuilder --node serverbuilder0 --driver-o
 
 ################################################################################
 
-BASE_IMAGE="maven:3.9.5-eclipse-temurin-21"
+BASE_IMAGE="maven:3.9.6-eclipse-temurin-21"
 
 docker rmi $BASE_IMAGE
 
